@@ -41,7 +41,7 @@ Make sure you have Python 3.8+ and pip installed on your system.
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/your-username/Gen-AI-Story-Writing.git](https://github.com/your-username/Gen-AI-Story-Writing.git)
+    git clone https://github.com/chaitanyananepallicn/Gen-AI-Story-Writing.git
     ```
 
 2.  **Navigate into the project directory:**
