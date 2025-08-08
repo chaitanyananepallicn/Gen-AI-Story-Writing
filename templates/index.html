@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Story Plot Generator</title>
+    <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>AI Story Plot Generator</h1>
+
+        <label>Genre:</label>
+        <input type="text" id="genre" placeholder="e.g., Sci-Fi, Romance" />
+
+        <label>Characters:</label>
+        <input type="text" id="characters" placeholder="e.g., Alice, a talking robot" />
+
+        <label>Theme/Setting:</label>
+        <input type="text" id="theme" placeholder="e.g., A post-apocalyptic world" />
+
+        <button onclick="generatePlot()">Generate Story Plot</button>
+
+        <div id="result" class="story-output"></div>
+        <button id="download" style="display:none;" onclick="downloadStory()">Download as TXT</button>
+    </div>
+
+    <script>
+        async function generatePlot() {
+            const genre = document.getElementById('genre').value;
+            const characters = document.getElementById('characters').value;
+            const theme = document.getElementById('theme').value;
+
+            const response = await fetch('/generate', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({genre, characters, theme})
+            });
+
+            const data = await response.json();
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerText = data.plot;
+            document.getElementById('download').style.display = 'inline-block';
+        }
+
+        function downloadStory() {
+            const story = document.getElementById('result').innerText;
+            const blob = new Blob([story], {type: "text/plain"});
+            const link = document.createElement("a");
+            link.href = URL.createObjectURL(blob);
+            link.download = "generated_story.txt";
+            link.click();
+        }
+    </script>
+</body>
+</html>
