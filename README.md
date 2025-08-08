@@ -6,12 +6,12 @@ A web application built with Python (Flask) and powered by Google's Gemini API t
 
 ***
 
-## ## Live Application
+## Live Application
 
 **You can access a live deployed demo here:**
 [**➡️ Live Story Writing App**](https://your-live-app-url.com)  ***
 
-## ## Features
+## Features
 
 * **Interactive Story Generation**: Continuously build a story by feeding AI-generated text back as the new prompt.
 * **Genre Selection**: Tailor the story's tone by choosing from genres like Fantasy, Sci-Fi, Mystery, and more.
@@ -21,7 +21,7 @@ A web application built with Python (Flask) and powered by Google's Gemini API t
 
 ***
 
-## ## Tech Stack
+## Tech Stack
 
 * **Backend**: Flask
 * **AI Model**: Google Gemini Pro
@@ -29,11 +29,11 @@ A web application built with Python (Flask) and powered by Google's Gemini API t
 
 ***
 
-## ## Getting Started
+## Getting Started
 
 To run this project on your local machine, follow these steps.
 
-### ### Prerequisites
+### Prerequisites
 
 Make sure you have Python 3.8+ and pip installed on your system.
 
