@@ -9,7 +9,7 @@ A web application built with Python (Flask) and powered by Google's Gemini API t
 ## Live Application
 
 **You can access a live deployed demo here:**
-[**➡️ Live Story Writing App**](https://your-live-app-url.com)  ***
+[**➡️ Live Story Writing App**](https://gen-ai-story-writing-2.onrender.com)  ***
 
 ## Features
 
